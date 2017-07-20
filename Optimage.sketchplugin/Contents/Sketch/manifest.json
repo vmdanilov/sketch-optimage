@@ -1,0 +1,43 @@
+{
+  "name": "Optimage",
+  "description": "Compress image assets with Optimage.",
+  "author": "Vlad Danilov",
+  "authorEmail" : "vladmdanilov@gmail.com",
+  "homepage": "http://designplugins.com/sketch-optimage",
+  "appcast": "https://designplugins.com/sketch-optimage/appcast.xml",
+  "version": "1.0.0",
+  "identifier": "com.designplugins.sketch.optimage",
+  "compatibleVersion": 3.8,
+  "bundleVersion": 1,
+  "commands": [
+    {
+      "name": "Export…",
+      "identifier": "optimageExport",
+      "script": "main.js",
+      "handlers": {
+        "run": "run"
+      }
+    },
+    {
+      "script": "main.js",
+      "handlers": {
+          "ExportSlices": "runAuto",
+          "Export": "runAuto"
+      }
+    },
+    {
+      "name": "Auto Compress",
+      "identifier": "optimageToggleAutoCompression",
+      "script": "main.js",
+      "handlers": {
+        "run": "toggleAutoCompression"
+      }
+    }
+  ],
+  "menu": {
+    "items": [
+      "optimageExport",
+      "optimageToggleAutoCompression"
+    ]
+  }
+}
